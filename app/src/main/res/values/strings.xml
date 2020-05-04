@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SecondApp</string>
+    <string name="nazwa_strony">Nazwa strony</string>
+    <string name="adres_url">Adres URL</string>
+    <string name="opis_tre_ci">Opis treści</string>
+    <string name="zapisz">Zapisz</string>
+    <string name="anuluj">Anuluj</string>
+    <string name="website_empty">Musisz uzupełnić tę pole</string>
+    <string name="website_error">Niepoprawna wartość</string>
+</resources>

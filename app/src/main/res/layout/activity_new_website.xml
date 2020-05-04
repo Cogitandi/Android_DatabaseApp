@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:whatever="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tlo2"
+    android:orientation="vertical"
+    tools:context=".newWebsiteActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/nazwa_strony"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold|italic" />
+
+            <com.andreabaccega.widget.FormEditText
+                android:id="@+id/newWebsite_webNameET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:inputType="text"
+                whatever:customRegexp="^[ \.a-żA-Ż0-9]+$"
+                whatever:emptyErrorString="@string/website_empty"
+                whatever:testErrorString="@string/website_error"
+                whatever:testType="regexp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/opis_tre_ci"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold|italic" />
+
+            <com.andreabaccega.widget.FormEditText
+                android:id="@+id/newWebsite_descriptionET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:inputType="text"
+                whatever:customRegexp="^[ \.a-żA-Ż0-9]+$"
+                whatever:emptyErrorString="@string/website_empty"
+                whatever:testErrorString="@string/website_error"
+                whatever:testType="regexp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/adres_url"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold|italic" />
+
+            <com.andreabaccega.widget.FormEditText
+                android:id="@+id/newWebsite_urlET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:inputType="text"
+                whatever:emptyErrorString="@string/website_empty"
+                whatever:testErrorString="@string/website_error"
+                whatever:testType="webUrl" />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="35dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/newWebsite_cancelBTN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="@string/anuluj" />
+
+        <Button
+            android:id="@+id/newWebsite_addBTN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="@string/zapisz" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/pdfIV"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:saveEnabled="false"
+            android:src="@drawable/ic_pdf" />
+
+        <ImageView
+            android:id="@+id/internetIV"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:foregroundGravity="right"
+            android:saveEnabled="false"
+            android:src="@drawable/ic_internet" />
+
+    </LinearLayout>
+</LinearLayout>
